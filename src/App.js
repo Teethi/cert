@@ -351,7 +351,7 @@ export default function App() {
             updateFormParams({ ...formParams, name: e.target.value })
           }
           value={formParams.name}/>
-        />
+      
       </div>
       <div class="mb-3">
         <label
