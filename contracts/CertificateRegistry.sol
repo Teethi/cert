@@ -53,10 +53,7 @@ contract CertificateRegistry {
     // Function for users to get their certificate serial number and QR code
     function getCertificateInfo() public view returns (string memory, string memory, string memory, string memory, uint256,bool, bool, address) {
         Certificate storage certificate = certificates[msg.sender];
-        require(
-            certificate.isApproved,
-            "Certificate has not been approved yet"
-        );
+     
         // bytes32 qrCode = keccak256(
         //     abi.encodePacked(certificate.serialNumber, msg.sender)
         // );
