@@ -374,7 +374,7 @@ export default function App() {
         <label
           for="exampleFormControlInput1"
           class="form-label">
-          Email address
+          month
         </label>
         <input
           type="email"
