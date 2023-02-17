@@ -13,16 +13,14 @@ export default function App() {
     uniName: '',
     course: '',
     month: '',
-    year: '',
-    isApproved: '',
-    isPending: '',
+    year: 0,
+    isApproved: false,
+    isPending: false,
     address: '',
   });
   const [fileURL, setFileURL] = useState(null);
   // const ethers = require("ethers");
-  const [name, setName] = useState('');
-  setName("kenil");
-  
+  const [message, updateMessage] = useState('');
   let [account, setAccount] = useState('');
   let [contractData, setContractData] = useState('');
   // const location = useLocation();
@@ -238,14 +236,14 @@ export default function App() {
 
   const getData = async () => {
     const phrase = await contract.applyForCertificate(
-      'kenil',
-      'sdf',
-      'asd',
-      'asdasd',
-      20,
-      true,
+      formParams.name,
+      formParams.uniName,
+      formParams.month,
+      formParams.course,
+      formParams.year,
       false,
-      '0xf2548ed43a974b611b128850436a23cc984cf7f3'
+      true,
+      '0'
     );
     const arr = await phrase.wait();
     console.log(arr);
@@ -334,17 +332,25 @@ export default function App() {
   // console.log("Working", process.env);
   return (
     <>
-      {/* <div class="mb-3">
+      <div class="mb-3">
         <label
           for="exampleFormControlInput1"
-          class="form-label">
-          Email address
+          class="form-label"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, name: e.target.value })
+          }
+          value={formParams.name}>
+          Name
         </label>
         <input
           type="email"
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, name: e.target.value })
+          }
+          value={formParams.name}/>
         />
       </div>
       <div class="mb-3">
@@ -411,73 +417,20 @@ export default function App() {
           id="exampleFormControlInput1"
           placeholder="name@example.com"
         />
-      </div> */}
+      </div>
+      <button onClick={getData}> store </button>
       <button onClick={connectMetamask}>CONNECT TO METAMASK</button>
       <button onClick={connectContract}>CONNECT TO CONTRACT</button> <br />{' '}
       <br />
       <p>{account}</p>
-      <button
+      {/* <button
         type="button"
         class="btn btn-primary"
         onClick={getData}>
         Primary
       </button>
       <button onClick={changeData}>CONNECT TO CONTRACT</button>\
-      <p>{contractData}</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <p>{contractData}</p> */}
     </>
   );
 }
