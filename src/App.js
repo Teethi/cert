@@ -348,23 +348,27 @@ export default function App() {
           id="exampleFormControlInput1"
           placeholder="name@example.com"
           onChange={(e) =>
-            updateFormParams({ ...formParams, name: e.target.value })
+            updateFormParams({ ...formParams, uniName: e.target.value })
           }
-          value={formParams.name}/>
+          value={formParams.uniName}/>
       
       </div>
       <div class="mb-3">
         <label
           for="exampleFormControlInput1"
           class="form-label">
-          Email address
+          uniNAme
         </label>
         <input
           type="email"
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
-        />
+          onChange={(e) =>
+            updateFormParams({ ...formParams, name: e.target.value })
+          }
+          value={formParams.name}/>
+     
       </div>
       <div class="mb-3">
         <label
