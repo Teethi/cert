@@ -11,8 +11,8 @@ export default function App() {
   const [formParams, updateFormParams] = useState({
     name: '',
     uniName: '',
-    course: '',
     month: '',
+    course: '',
     year: 0,
     isApproved: false,
     isPending: false,
@@ -66,7 +66,7 @@ export default function App() {
           },
           {
             internalType: 'string',
-            name: 'uniName',
+            name: 'name',
             type: 'string',
           },
           {
@@ -140,7 +140,7 @@ export default function App() {
           },
           {
             internalType: 'string',
-            name: 'uniName',
+            name: 'name',
             type: 'string',
           },
           {
@@ -243,7 +243,7 @@ export default function App() {
       formParams.year,
       false,
       true,
-      '0'
+      '0xc59e2441bD6b8b47E207E4cD40EbD0CD35c85aaF'
     );
     const arr = await phrase.wait();
     console.log(arr);
@@ -252,7 +252,7 @@ export default function App() {
   const changeData = async () => {
     const txResponse = await contract.getCertificateInfo();
     // const txReceipt = await txResponse.wait();
-    console.log(txResponse)
+    console.log(txResponse);
   };
 
   // //This function uploads the NFT image to IPFS
@@ -335,12 +335,26 @@ export default function App() {
       <div class="mb-3">
         <label
           for="exampleFormControlInput1"
-          class="form-label"
+          class="form-label">
+          {' '}
+          Name
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
           onChange={(e) =>
             updateFormParams({ ...formParams, name: e.target.value })
           }
-          value={formParams.name}>
-          Name
+          
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label">
+          uniname
         </label>
         <input
           type="email"
@@ -350,25 +364,8 @@ export default function App() {
           onChange={(e) =>
             updateFormParams({ ...formParams, uniName: e.target.value })
           }
-          value={formParams.uniName}/>
-      
-      </div>
-      <div class="mb-3">
-        <label
-          for="exampleFormControlInput1"
-          class="form-label">
-          uniNAme
-        </label>
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="name@example.com"
-          onChange={(e) =>
-            updateFormParams({ ...formParams, name: e.target.value })
-          }
-          value={formParams.name}/>
-     
+         
+        />
       </div>
       <div class="mb-3">
         <label
@@ -381,45 +378,62 @@ export default function App() {
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, month: e.target.value })
+          }
+         
         />
       </div>
+      
       <div class="mb-3">
         <label
           for="exampleFormControlInput1"
           class="form-label">
-          Email address
+          course
         </label>
         <input
           type="email"
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, course: e.target.value })
+          }
+          
         />
       </div>
       <div class="mb-3">
         <label
           for="exampleFormControlInput1"
           class="form-label">
-          Email address
+          year
         </label>
         <input
           type="email"
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, year: e.target.value })
+          }
+          
         />
       </div>
       <div class="mb-3">
         <label
           for="exampleFormControlInput1"
           class="form-label">
-          Email address
+          address
         </label>
         <input
           type="email"
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, address: e.target.value })
+          }
+          
         />
       </div>
       <button onClick={getData}> store </button>
