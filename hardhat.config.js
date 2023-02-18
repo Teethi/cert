@@ -27,12 +27,12 @@ module.exports = {
     hardhat: {
       chainId: 1337,
     },
-    celo: {
-      url: 'https://polygon-mumbai.g.alchemy.com/v2/UVQD7tAU7RwKHWZ7Pv3E7nbwMAJEsWLF',
-      accounts: [
-        '8cf4c3f797a292fc7d614699cdb22e58e4b7569ae2fa2bb95a8409e864ebb0ed',
-      ]
-    },
+    // celo: {
+    //   url: 'https://polygon-mumbai.g.alchemy.com/v2/UVQD7tAU7RwKHWZ7Pv3E7nbwMAJEsWLF',
+    //   accounts: [
+    //     '8cf4c3f797aw292fc7d614699cdb22e58e4b7569ae2fa2bb95a8409e864ebb0ed',
+    //   ]
+    // },
   },
   solidity: '0.8.4',
 };
