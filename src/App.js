@@ -332,9 +332,31 @@ export default function App() {
   // console.log("Working", process.env);
   return (
     <>
-      <div class="mb-3">
+
+
+<nav class="navbar navbar-light bg-dark p-3">
+  <a class="navbar-brand" href="#">Navbar</a>
+</nav>
+<div className='conatainer m-5'>
+<div style={{alignItems:"center",
+justifyContent:"center" }} ><center> <img    style={{width:"300px",
+height:"300px",
+
+   
+  }}   src='https://thumbs.dreamstime.com/z/untitled-old-rolled-certificate-icon-138483633.jpg'/> </center> </div>
+
+
+<center>
+
+
+    <div className="card bg-success" style={{width:"500px"
+    
+   
+   }}>
+  <div class="card-body"   >
+  <div class="mb-3">
         <label
-          for="exampleFormControlInput1"
+          forHtml="exampleFormControlInput1"
           class="form-label">
           {' '}
           Name
@@ -350,7 +372,10 @@ export default function App() {
           
         />
       </div>
-      <div class="mb-3">
+      <div  style={
+        
+        {width:"18 rem" }
+      }>
         <label
           for="exampleFormControlInput1"
           class="form-label">
@@ -436,11 +461,16 @@ export default function App() {
           
         />
       </div>
-      <button onClick={getData}> store </button>
-      <button onClick={connectMetamask}>CONNECT TO METAMASK</button>
-      <button onClick={connectContract}>CONNECT TO CONTRACT</button> <br />{' '}
+      <button type="button" class="btn btn-dark p-2 m-3" onClick={getData}> store </button>
+      <button type="button" class="btn btn-dark p-2 m-3" onClick={connectMetamask}>CONNECT TO METAMASK</button>
+      <button type="button" class="btn btn-dark p-2 m-3" onClick={connectContract}>CONNECT TO CONTRACT</button> <br />{' '}
       <br />
       <p>{account}</p>
+  </div>
+</div>
+</center>
+</div>
+      
       {/* <button
         type="button"
         class="btn btn-primary"
