@@ -335,7 +335,149 @@ export default function App() {
   // console.log("Working", process.env);
   return (
     <>
+<<<<<<< HEAD
       
+=======
+
+
+<nav class="navbar navbar-light bg-dark p-3">
+  <a class="navbar-brand" href="#">Navbar</a>
+</nav>
+<div className='conatainer m-5'>
+<div style={{alignItems:"center",
+justifyContent:"center" }} ><center> <img    style={{width:"300px",
+height:"300px",
+
+   
+  }}   src='https://thumbs.dreamstime.com/z/untitled-old-rolled-certificate-icon-138483633.jpg'/> </center> </div>
+
+
+<center>
+
+
+    <div className="card bg-success" style={{width:"500px"
+    
+   
+   }}>
+  <div class="card-body"   >
+  <div class="mb-3">
+        <label
+          forHtml="exampleFormControlInput1"
+          class="form-label">
+          {' '}
+          Name
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, name: e.target.value })
+          }
+          
+        />
+      </div>
+      <div  style={
+        
+        {width:"18 rem" }
+      }>
+        <label
+          for="exampleFormControlInput1"
+          class="form-label">
+          uniname
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, uniName: e.target.value })
+          }
+         
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label">
+          month
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, month: e.target.value })
+          }
+         
+        />
+      </div>
+      
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label">
+          course
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, course: e.target.value })
+          }
+          
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label">
+          year
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, year: e.target.value })
+          }
+          
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="exampleFormControlInput1"
+          class="form-label">
+          address
+        </label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+          onChange={(e) =>
+            updateFormParams({ ...formParams, address: e.target.value })
+          }
+          
+        />
+      </div>
+      <button type="button" class="btn btn-dark p-2 m-3" onClick={getData}> store </button>
+      <button type="button" class="btn btn-dark p-2 m-3" onClick={connectMetamask}>CONNECT TO METAMASK</button>
+      <button type="button" class="btn btn-dark p-2 m-3" onClick={connectContract}>CONNECT TO CONTRACT</button> <br />{' '}
+      <br />
+      <p>{account}</p>
+  </div>
+</div>
+</center>
+</div>
+      
+>>>>>>> 524573ebf15af58bb34c884b7d5479acb60af0d7
       {/* <button
         type="button"
         class="btn btn-primary"
