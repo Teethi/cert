@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_celo_composer/internal/wallet_external_configuration.dart';
 import 'package:flutter_celo_composer/module/auth/service/cubit/auth_cubit.dart';
-import 'package:flutter_celo_composer/module/home/interfaces/screens/home_screen.dart';
+import 'package:flutter_celo_composer/views/common_view.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class AuthenticationScreen extends StatefulWidget {
